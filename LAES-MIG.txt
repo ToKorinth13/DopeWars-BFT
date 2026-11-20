@@ -1,0 +1,111 @@
+DOPE WARS - BFT EDITION 1.1.0
+
+SPIL FRA ZIP
+Udpak hele ZIP-pakken, og start DopeWars-BFT.exe i spilmappen.
+Behold _internal ved siden af EXE-filen. Python skal ikke installeres.
+Windows 10/11, 64 bit. Gemninger ligger i %LOCALAPPDATA%\BFT-DopeWars.
+Slet den udpakkede mappe for at fjerne spillet; gemninger bevares.
+Se SIGNERING.txt for den aktuelle signeringsstatus.
+
+KOM I GANG
+Vælg Singleplayer, skriv dit navn og vælg 31, 90, 180 eller 365 dage.
+Alle nye spil starter i Høje på Fyn. Fortsæt gemt spil genoptager din autosave.
+Markedet står til venstre, og din taske står til højre. Vælg en vare, udfyld
+antal og tryk Køb eller Sælg. Maks./Alle udfylder feltet uden at handle.
+
+Prisen i tasken er din gennemsnitlige indkøbspris pr. enhed. Den ændres ikke,
+bare fordi du rejser. Beløbet under Sælg viser dagens pris for dit valgte
+antal samt gevinst/tab i forhold til indkøbet. Køb og salg bruger PRÆCIS
+samme pris: Køb og sælg samme vare samme dag, så får du hele beløbet igen.
+Ingen handelsfradrag. Priser varierer stadig, når du rejser eller venter.
+
+Store prisbegivenheder vises i et vindue ved dagens skifte. En levering
+eller et lagerudsalg sænker en vares pris med 70-80 procent; en razzia eller
+panikkøb hæver den til 3-4 gange den normale pris for det nye marked.
+Begivenhedens pris gælder ved både køb og salg resten af dagen.
+Der er 35 procent chance pr. dag, og højst fire dagsskift mellem begivenheder.
+
+Byknapper rejser direkte. Områder i byen viser seks lokale områder.
+Rejser, lokale områdeskift og Næste dag bruger én af dine spildage.
+Renter, mules, hvidvaskning og virksomheder afregnes ved dagens skifte.
+På sidste dag kan du stadig handle. Afslut registrerer din slutscore.
+
+PENGE OG HIGHSCORE
+Kontanter er sorte penge. Bank er lovlige likvider. Lån giver kontanter og
+gæld. Du kan hæve fra banken til kontanter; det sænker din offentlige score.
+Varer, udstyr og mules købes med kontanter. Virksomheder købes fra banken.
+Kontanter kan ikke indsættes direkte i banken. De skal først hvidvaskes.
+
+Score = bank + virksomhedernes salgsværdi - gæld.
+Kontanter, varer og beløb, der venter på behandling, tæller ikke.
+Virksomheder har en salgsværdi på 60 procent af købsprisen. Separate lokale
+highscorelister for hver tidshorisont. LAN har sin egen stilling pr. session.
+
+BANK
+Lån, afdrag med kontanter eller bankpenge samt hævning til kontanter.
+Renten er 1,5 procent pr. spildag, oprundet, med renters rente.
+Maks. tager hensyn til saldo, gæld og din aktuelle lånegrænse.
+Hvidvaskning har tre fiktive niveauer:
+  Billig:    15 procent gebyr, 5-12 dage.
+  Standard:  25 procent gebyr, 3-7 dage.
+  Hurtig:    40 procent gebyr, 1-3 dage.
+Den præcise dag er skjult og trækkes ved bestilling. Gemning/genindlæsning
+ændrer den ikke. Udbetalingen kommer automatisk. Ingen afbestilling.
+Ordrer, der ikke når at blive færdige, tæller ikke i slutscoren.
+Du kan højst have 128 ventende ordrer samlet hos bank og virksomheder.
+
+SHOP OG POLITI
+Opgradér tasken fra 50 til 100, 200, 350 eller 600 enheder.
+Tre våbenklasser forbedrer dine chancer mod politiet. Kamp og flugt kan
+koste helbred. Shoppen kan også helbrede dig. Ved død slutter spillet.
+En kontrol uden varer giver ét green card, højst ét ad gangen.
+Kontroller har 18 procent grundchance pr. dag, stigende med opmærksomhed.
+Der går højst seks dagsskift mellem kontroller. Også kontroller med tom
+taske vises tydeligt. På 31 dage får du derfor mindst fem kontroller,
+hvis du gennemfører hele runden.
+Ved et senere stop kan kortet bruges til en forklaring: 50 procent chance
+for at beholde alt. Kortet bruges op. Et afslag tager varerne og 25 procent
+af kontanterne, men koster ikke helbred. Bankpenge bliver bevaret.
+
+MULES OG INVESTERINGER
+Hyr op til seks mules i andre byer. Tre niveauer sælger op til 5/12/25
+varer om dagen mod 12/20/28 procent cut. Send varer fra din taske; hver mule
+kan opbevare 500. Et sjældent tilbagefald koster varer og to dages pause.
+Salg starter fra dit næste dagsskifte. En mule kan afskediges med tomt lager.
+
+Køb op til seks virksomheder for lovlige bankpenge. De giver dagligt afkast
+og kan behandle kontanter mod gebyr, ventetid og begrænset kapacitet.
+Maks. tager hensyn til den ledige køplads. En virksomhed kan først sælges,
+når dens kø er tom. Alle mekanikker er fiktiv spilbalance.
+
+OVERSIGT OG GENVEJE
+F3: Bank. F4: Shop. F5: Mules. F6: Investeringer. F7: Hændelser.
+Hændelser viser de seneste dagsskift, handler og politistop.
+Dit resultat viser, hvordan slutscoren beregnes. Hjælp > Om spillet viser
+version, byprofiler, datakilde og forklaringer.
+
+GEMTE SPIL
+Singleplayer gemmes automatisk efter hver handling og ved lukning.
+%LOCALAPPDATA%\BFT-DopeWars\save.json
+%LOCALAPPDATA%\BFT-DopeWars\highscores.json
+Nyt singleplayerspil erstatter autosave. Highscores bevares.
+Ældre gemninger opgraderes uden at ændre dagens priser eller dine penge.
+Version 1.1.0 bruger regelsæt bft-5. Tidligere resultater bevares i filen,
+men holdes adskilt fra nye resultater, fordi handels- og risikoregler er ændret.
+LAN-filer ligger i samme mappe under LAN. Læs LAN-LAES-MIG.txt.
+
+BYER OG KILDER
+Otte danske byer og 48 navngivne områder. Byprofilerne for seks byer bruger
+sammenligninger inden for samme stof i AU/SST's spildevandsmålinger fra
+2024, offentliggjort i juni 2025. Det er renseanlægsoplande, ikke komplette
+bybefolkninger. Randers og Høje på Fyn har neutrale byprofiler.
+Statistikken er ikke prisdata eller en rangordning af de mest brugte stoffer.
+Priser, områders fordele, handelsmængder og risici er fiktive. Områdenavnene
+er spillets kulisse, ikke oplysninger om virkelige salgssteder.
+Kilde: https://www.sst.dk/media/ge5pvsjy/national-kortlaegning-af-rusmidler-i-spildevand-fra-danske-byer.pdf
+
+OM UDGAVEN
+Selvstændig nyimplementering. Originalens Beermat-EXE er ikke ændret eller
+inkluderet. Produktgruppens logo vises på startskærmen og i Om spillet.
+Kildekode og byggevejledning er med i source. Bibliotekslicenser findes i
+licenses og THIRD-PARTY.txt. Se RELEASE-NOTES.txt for validering og grænser.

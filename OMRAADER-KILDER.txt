@@ -1,0 +1,14 @@
+STEDNAVNE OG SPILBALANCE
+Områderne er valgt som genkendelige bydele og vartegn, ikke faktiske salgssteder.
+Alle lokale stofprisprofiler er fiktivt spildesign. Byernes eksisterende
+spildevandsdata bruges fortsat kun på byniveau. Høje og Randers er neutrale.
+Højes zoner er generiske, fiktive områder; ingen lokal statistik tilskrives dem.
+
+Geografiske inspirationskilder:
+https://www.visitaarhus.dk/aarhusregionen/planlaeg-ferien/randers-storcenter-gdk622729
+https://www.visitaarhus.dk/byer-og-steder/aarhus/kultur-i-aarhus/byens-hjerte
+https://www.visitodense.com/files/visitodense.com/2026-03/2026-visitodense-brochure_digital.pdf
+https://www.visitdenmark.com/denmark/destinations/jutland/aalborg
+https://www.sydsjaellandmoen.dk/sydsjaelland-moen/oplev/ud-i-naturen/korte-gaature-paa-sydsjaelland-moen
+
+Kilderne understøtter stednavne/geografi, ikke spillets priser eller kriminalitet.

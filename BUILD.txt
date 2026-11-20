@@ -1,0 +1,36 @@
+BUILD / WINDOWS X64
+
+Install Python 3.12 x64. In this source directory run:
+  .\build.ps1
+
+This creates .build-env, installs requirements.txt, generates the BFT icon/logo,
+runs all game/UI/TLS acceptance tests, builds the onedir game, and tests the
+packaged EXE. Dependencies are pinned to the locally tested versions.
+
+Outputs:
+  dist\DopeWars-BFT\DopeWars-BFT.exe and the complete _internal folder
+  dist\DopeWars-BFT-Spil-1.1.0-unsigned.zip
+  dist\reports\source-tests.json
+  dist\reports\packaged-release-self-test.json
+  dist\reports\packaged-self-test.json
+
+For local validation with an existing isolated Python 3.12 x64 environment:
+  .\build.ps1 -PythonExe 'C:\Path\To\venv\Scripts\python.exe' -SkipDependencyInstall
+Use that option only when the installed packages match requirements.txt.
+CI always installs the requirements in its own clean environment.
+
+Source entry point: app.py. Authoritative shared rules: game.py.
+LAN TLS host and command validation: lan.py. Lobby and UDP discovery:
+lan_ui.py / lan_discovery.py. Original artwork: visuals.py / app.py.
+
+Dependencies are dynamically loaded from _internal. Their notices and license
+texts are included. Source is included for rebuilding with replacement
+libraries. Windows system fonts are used but are not included in the package.
+
+The SignPath candidate is a portable game ZIP, without installation scripts.
+The first integration signs the game EXE only. The existing Inno Setup
+installer is not rebuilt or represented as signed by this workflow. A later
+installer release must embed the signed game and separately sign the installer
+and its uninstaller using a SignPath-approved pipeline.
+
+See SIGNERING.txt for the optional, approval-dependent signing stage.

@@ -1,0 +1,38 @@
+CODE SIGNING POLICY
+
+STATUS
+Application in preparation. SignPath Foundation has not approved this project
+and no production SignPath signature has been issued for these builds.
+The project must not advertise an unsigned build as signed or approved.
+
+PROPOSED RESPONSIBILITIES
+Committer, reviewer and release approver: GitHub user jesperwhenriksen.
+The maintainer must confirm these roles and enable MFA on GitHub and SignPath
+before enrollment. Each production signing request requires manual approval
+by a human maintainer in the SignPath signing policy.
+
+PROVENANCE AND SCOPE
+Build from reviewed main source on GitHub-hosted Windows runners using the
+committed workflow. Dependency versions and action commit IDs are pinned.
+Only DopeWars-BFT.exe is signed. The artifact configuration restricts the
+filename, product name, company and product/file versions.
+Upstream DLLs, PYDs and executables are included without re-signing.
+After signing, verify public Authenticode trust, SignPath Foundation identity,
+timestamp, product metadata and byte-for-byte preservation of all other files.
+Stop release on any verification failure. Never silently substitute an unsigned
+artifact for a requested signed one. Signing keys are managed by SignPath;
+only its API token belongs in the repository's Actions secret store.
+
+ATTRIBUTION AFTER APPROVAL
+Once sponsorship is approved, replace the pending status on the homepage and
+download pages with this required attribution:
+Free code signing provided by SignPath.io, certificate by SignPath Foundation.
+https://signpath.io/
+https://signpath.org/
+
+PRIVACY
+See PRIVACY.txt. Player data is not sent to SignPath. The signing service
+receives the public-source build artifact and build/repository provenance.
+
+REFERENCE
+https://signpath.org/terms

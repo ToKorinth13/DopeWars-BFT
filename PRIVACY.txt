@@ -1,0 +1,34 @@
+PRIVACY POLICY / DOPE WARS - BFT EDITION
+
+The game does not contain advertising, analytics, telemetry, online accounts,
+automatic update checks or communication with the BFT download website.
+
+SINGLEPLAYER
+Player names, saved game state, settings and local highscores are stored on
+the player's computer in %LOCALAPPDATA%\BFT-DopeWars (or the explicitly
+configured BFT_DATA_DIR). They are not uploaded by singleplayer mode.
+
+LAN
+Selecting LAN enables local-network discovery. Hosting broadcasts lobby
+information on the LAN and runs a TLS game server. Joining sends a chosen
+player name, game commands and authentication token to the selected host.
+The host stores the session and game state. Lobby/player names, readiness,
+public scores and connection status are visible to other session participants.
+Private inventory and hidden economy are filtered from other clients' views;
+the host itself controls the authoritative session and its files.
+IP addresses are necessarily visible to peers participating in LAN traffic.
+There is no central server or matchmaking service.
+
+Network communication occurs only as part of the user's requested LAN play.
+The user can close LAN mode or the game to end that session's communication.
+All parties should choose a trusted host for their game.
+
+REMOVAL
+Removing the portable game folder does not remove save data. Delete the
+BFT-DopeWars data folder to remove local saves and scores. A LAN host can
+retain its own copy of a completed or interrupted session.
+
+DISTRIBUTION SERVICES
+GitHub and SignPath operate their own websites and build/signing services.
+The game does not send player data to them. Their respective privacy policies
+apply to visits, downloads and maintainer use of those services.

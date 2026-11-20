@@ -1,0 +1,53 @@
+SIGNPATH / PREPARATION STATUS
+
+This is a proposed SignPath Foundation integration, not a signed release.
+It requires a public open source repository, an accepted application and
+SignPath project/policy configuration. There are no signing credentials or
+private keys in the source or game package.
+
+INITIAL SCOPE
+Portable Windows game ZIP. Sign DopeWars-BFT.exe; do not sign upstream DLLs
+or PYDs with the BFT project certificate. Existing Inno installers remain
+outside this initial signing workflow. No download-unblocking launcher,
+Windows-policy change or certificate installation is part of this build.
+
+AFTER APPROVAL
+1. Configure the GitHub.com trusted build system for the accepted project.
+2. Give the SignPath GitHub integration access only to the game's repository
+   if requested during enrollment. Enable MFA. Configure human release approval.
+3. Import signpath/artifact-configuration.xml. Confirm the XML and signer
+   identity with SignPath during onboarding.
+4. Configure GitHub Actions repository variables:
+     SIGNPATH_ORGANIZATION_ID
+     SIGNPATH_PROJECT_SLUG
+     SIGNPATH_POLICY_SLUG
+     SIGNPATH_ARTIFACT_SLUG
+   Store the API token as the Actions secret SIGNPATH_API_TOKEN. Do not put
+   it in source, a settings example, a chat message or a distributed file.
+5. In Actions, run 'Windows build and SignPath' on main with request_signing
+   enabled. The workflow builds/tests on a GitHub-hosted runner, uploads the
+   complete unsigned game artifact and submits that artifact ID to SignPath.
+6. The designated maintainer approves the request in SignPath. The workflow
+   waits up to one hour, verifies the result and packages the signed game ZIP.
+7. Review the signature-verification report and final ZIP before publishing.
+   The workflow itself does not create a public release or upload to BFT's site.
+
+VERIFICATION
+ci/verify-signed.ps1 requires Valid Authenticode status, a SignPath Foundation
+signer and a timestamp. It also verifies matching product metadata and checks
+that every file except the main EXE is unchanged. Further requirements from
+SignPath's reviewer must be incorporated before production signing.
+Configuration syntax and local unsigned builds can be tested before approval;
+the actual hosted signing service cannot be validated without enrollment.
+
+SMARTSCREEN
+A genuine signature identifies the publisher. Windows may still warn for a
+new file with insufficient reputation. Free signing is not a guarantee that
+every SmartScreen warning disappears on the first download.
+
+OFFICIAL REFERENCES
+https://signpath.org/apply
+https://signpath.org/terms
+https://docs.signpath.io/trusted-build-systems/github
+https://docs.signpath.io/artifact-configuration/reference
+https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation
